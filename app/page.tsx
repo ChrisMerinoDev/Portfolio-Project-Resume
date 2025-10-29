@@ -351,7 +351,7 @@ export default function Portfolio() {
         </Section>
 
         {/* SKILLS */}
-        <Section id="skills" title="Skills (ZTM — Complete Web Developer 2025)">
+        <Section id="skills" title="Skills">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {SKILLS.map((s) => (
               <Card key={s.group}>
