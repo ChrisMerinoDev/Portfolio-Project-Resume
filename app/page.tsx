@@ -28,14 +28,14 @@ const PROFILE = {
   name: "Chris Merino",
   title: "Frontend / Full-Stack Web Developer",
   taglines: [
-    "React • Next.js • TypeScript • Node",
+    "React • Next.js • TypeScript • JavaScript • Node",
     "Clean UI, solid architecture, and real-world results",
   ],
   location: "Miami, FL (open to remote)",
   email: "chrismerino.dev@gmail.com",
   github: "https://github.com/ChrisMerinoDev",
   linkedin: "https://www.linkedin.com/in/chrismerinodev",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/resume.png",
 };
 
 const SKILLS: { group: string; items: string[] }[] = [
