@@ -250,7 +250,7 @@ export default function Portfolio() {
                 </a>
                 <button
                   onClick={handleCopyEmail}
-                  className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 border border-white/10 hover:bg-white/10"
+                  className="inline-flex items-center gap-2 rounded-2xl px-4 py-2 border border-white/10 hover:bg-white/10 hover:cursor-pointer"
                 >
                   <Mail size={18} /> {copied ? "Email copied!" : "Copy Email"}
                 </button>
