@@ -35,7 +35,7 @@ const PROFILE = {
   email: "chrismerino.dev@gmail.com",
   github: "https://github.com/ChrisMerinoDev",
   linkedin: "https://www.linkedin.com/in/chrismerinodev",
-  resumeUrl: "/resume.png",
+  resumeUrl: "/ChrisM-Resume.pdf",
 };
 
 const SKILLS: { group: string; items: string[] }[] = [
