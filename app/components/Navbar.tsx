@@ -24,17 +24,8 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="nav-blur"
+        className="nav-blur nav-shell"
         style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 100,
-          padding: "16px 40px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
           background:
             scrollY > 50 ? "rgba(10,10,15,0.85)" : "transparent",
           borderBottom:
@@ -46,22 +37,12 @@ export default function Navbar() {
       >
         <a
           href="#hero"
-          style={{
-            fontFamily: "var(--font-display)",
-            fontWeight: 800,
-            fontSize: 20,
-            color: "#E8E8ED",
-            textDecoration: "none",
-            letterSpacing: "-0.5px",
-          }}
+          className="nav-brand"
         >
           CM<span style={{ color: "#00F0FF" }}>.</span>
         </a>
 
-        <div
-          className="desktop-nav"
-          style={{ display: "flex", gap: 32, alignItems: "center" }}
-        >
+        <div className="desktop-nav">
           {navLinks.map((l) => (
             <a
               key={l.label}
@@ -93,6 +74,9 @@ export default function Navbar() {
             {l.label}
           </a>
         ))}
+        <a href={`mailto:${portfolio.email}`} onClick={() => setMenuOpen(false)}>
+          Let&apos;s Talk
+        </a>
       </div>
     </>
   );
