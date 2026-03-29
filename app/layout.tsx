@@ -1,36 +1,39 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Syne } from "next/font/google";
 import "./globals.css";
-import { icons } from "lucide-react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
   subsets: ["latin"],
+  variable: "--font-body",
+  weight: ["300", "400", "500", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const syne = Syne({
   subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "ChrisM.dev",
-  description: "My Personal Portfolio :)",
-  icons: { icon: "/pt-icon.svg" }
+  title: "Chris Merino — Frontend Developer",
+  description:
+    "Frontend developer building production-ready web applications with React, Next.js, and TypeScript. Experienced in authentication, payments, and AI integrations.",
+  openGraph: {
+    title: "Chris Merino — Frontend Developer",
+    description:
+      "Building production-ready web apps with React, Next.js & TypeScript.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className={`${dmSans.variable} ${syne.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
